@@ -1,0 +1,23 @@
+.card{
+    @apply h-[300px] relative z-10 flex items-end justify-center shadow-2xl
+}
+.overlay{
+    @apply w-full h-0 bg-black absolute -z-[9] opacity-65 transition-all duration-1000
+}
+.bgImage{
+    @apply object-cover -z-10
+}
+
+.cardInner{
+    @apply py-5 overflow-hidden
+}
+.cardInnerTitle{
+    @apply text-white uppercase font-mono text-[35px] text-center translate-y-[50px] transition-all duration-1000  
+}
+.cardCTA{
+    @apply overflow-hidden translate-y-[100px] px-14   transition-all duration-1000  border-2 border-white text-center py-2 mt-2
+}
+
+.cardCTAtitle{
+    @apply text-white text-[14px] font-sans
+}

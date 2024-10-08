@@ -1,0 +1,16 @@
+.ProfileGrid{
+    @apply grid grid-cols-12 gap-5 justify-center items-center
+}
+
+.ProfileColumn{
+    @apply col-span-3 rounded-full overflow-hidden w-[130px] h-[130px] border-[3px] border-white
+}
+.ProfileTextColoumn{
+    @apply col-span-9
+}
+.ProfileTitle{
+    @apply text-white  text-[35px] uppercase text-left font-mono 
+}
+.ProfileDescription{
+    @apply text-white text-[15px] mt-0 font-sans
+}

@@ -1,0 +1,9 @@
+.MainGrid{
+    @apply grid grid-cols-12
+}
+.MainCol{
+    @apply col-span-6
+}
+.MainTitle{
+    @apply text-white font-bold font-mono text-[95px] text-right uppercase
+}
