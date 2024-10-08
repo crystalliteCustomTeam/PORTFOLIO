@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Style from './profile.module.css'
-import ProfileImage from 'Media/Profile/Profile.jpg';
+import ProfileImage from 'Media/Profile/profile.jpg';
 
 
 export default function Profile() {
