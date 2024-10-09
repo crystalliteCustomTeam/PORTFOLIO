@@ -3,7 +3,7 @@
 }
 
 .ProfileColumn{
-    @apply col-span-3 rounded-full overflow-hidden w-[130px] h-[130px] border-[3px] border-white
+    @apply col-span-12 md:col-span-3 rounded-full overflow-hidden w-[130px] h-[130px] border-[3px] border-white
 }
 .ProfileTextColoumn{
     @apply col-span-9

@@ -8,7 +8,7 @@ export default function HeaderContainer() {
             <div className={Style.MainCol}>
                 <Profile />
             </div>
-            <div className={Style.MainCol}>
+            <div className={`${Style.MainCol} hidden md:block`}>
                 <h1 className={Style.MainTitle}>Portfolio</h1>
             </div>
         </div>
