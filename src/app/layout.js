@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${Francy.variable} ${poppins.variable} relative`}>
+      <body className={`${Francy.variable} ${poppins.variable} relative `}>
         <Image src={BG} fill={true} className="object-fill -z-10 absolute" alt="Faisal Qadeer Yousufi" />
         {children}
       </body>
