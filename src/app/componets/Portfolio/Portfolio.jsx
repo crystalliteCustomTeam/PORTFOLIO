@@ -52,11 +52,11 @@ export default function Portfolio({ slug }) {
     if (!data) return <p>No profile data</p>
 
     return (
-        <div className='grid grid-cols-3 gap-3'>
+        <div className='columns-2 md:columns-4 gap-4 space-y-4'>
             {
                 data.map(({ portfolios }) => (
                     portfolios.nodes.map(({featuredImage},k)=>(
-                        <Image key={k} src={featuredImage.node.sourceUrl} alt="FY" width={400} height={400}  />
+                        <Image key={k} src={featuredImage.node.sourceUrl} alt="FY" className='w-full' width={400} height={400}  />
                     ))
                 ))
             }
