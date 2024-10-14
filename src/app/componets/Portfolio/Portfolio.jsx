@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { Fancybox } from '..'
 
 
 export default function Portfolio({ slug }) {
@@ -48,15 +49,26 @@ export default function Portfolio({ slug }) {
     }, [])
 
 
-    if (isLoading) return <p>Loading...</p>
+    if (isLoading) return <div className="h-[90vh]"><h2 className="text-white font-mono text-[55px] uppercase">Portfolio Is Loading...</h2></div>;
     if (!data) return <p>No profile data</p>
 
     return (
         <div className='columns-2 md:columns-4 gap-4 space-y-4'>
             {
                 data.map(({ portfolios }) => (
-                    portfolios.nodes.map(({featuredImage},k)=>(
-                        <Image key={k} src={featuredImage.node.sourceUrl} alt="FY" className='w-full' width={400} height={400}  />
+                    portfolios.nodes.map(({ featuredImage }, k) => (
+
+                        <Fancybox key={k}
+                            options={{
+                                Carousel: {
+                                    infinite: true,
+                                },
+                            }}
+                        >
+                            <a data-fancybox="gallery" href={featuredImage.node.sourceUrl} className='w-full' >
+                                <Image src={featuredImage.node.sourceUrl} alt="FY" width={300} height={300} />
+                            </a>
+                        </Fancybox>
                     ))
                 ))
             }
