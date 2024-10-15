@@ -1,16 +1,16 @@
 .ProfileGrid{
-    @apply grid grid-cols-12 xl:gap-5 lg:gap-[40px] justify-center items-center
+    @apply md:flex block gap-5 lg:gap-[40px] justify-center items-center
 }
 
 .ProfileColumn{
-    @apply col-span-4 lg:col-span-3 rounded-full overflow-hidden w-[130px] h-[130px] border-[3px] border-white mx-auto
+    @apply rounded-full overflow-hidden max-w-[130px] border-[3px] border-white mx-auto
 }
-.ProfileTextColoumn{
+/* .ProfileTextColoumn{
     @apply col-span-8 lg:col-span-9
-}
+} */
 .ProfileTitle{
-    @apply text-white  xl:text-[35px] text-[30px] uppercase text-left font-mono
+    @apply text-white  xl:text-[35px] text-[30px] uppercase md:text-left text-center font-mono xs:mb-3 sm:mb-3 md:mb-1
 }
 .ProfileDescription{
-    @apply text-white text-[15px] mt-0 font-sans
+    @apply text-white md:text-[15px] xs:text-[13px] text-[14px] mt-0 font-sans md:text-left text-center
 }

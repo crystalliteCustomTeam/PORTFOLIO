@@ -9,7 +9,7 @@ export default function Profile() {
         <div className={Style.ProfileGrid}>
             <div className={Style.ProfileColumn}>
                 <Link href="/">
-                <Image src={ProfileImage} alt="Faisal Qadeer Yousufi" witdh="130" height="130" className='mx-auto block'/>
+                <Image src={ProfileImage} alt="Faisal Qadeer Yousufi" className='mx-auto block'/>
                 </Link>
             </div>
             <div className={Style.ProfileTextColoumn}>
