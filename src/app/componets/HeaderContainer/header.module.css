@@ -2,8 +2,8 @@
     @apply grid grid-cols-12
 }
 .MainCol{
-    @apply  col-span-12 md:col-span-6 
+    @apply  col-span-12 md:col-span-6 xl:col-span-6 lg:col-span-6
 }
 .MainTitle{
-    @apply text-white font-bold font-mono xs:text-[30px] md:text-[95px] text-right uppercase
+    @apply text-white font-bold font-mono xs:text-[65px] text-[65px] md:text-[95px] text-right uppercase
 }
