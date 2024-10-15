@@ -53,7 +53,7 @@ export default function Portfolio({ slug }) {
     if (!data) return <p>No profile data</p>
 
     return (
-        <div className='columns-2 md:columns-4 gap-4 space-y-4'>
+        <div className='columns-1 md:columns-2 xl:columns-4 lg:columns-3 gap-5 space-y-4'>
             {
                 data.map(({ portfolios }) => (
                     portfolios.nodes.map(({ featuredImage }, k) => (
@@ -66,7 +66,7 @@ export default function Portfolio({ slug }) {
                             }}
                         >
                             <a data-fancybox="gallery" href={featuredImage.node.sourceUrl} className='w-full' >
-                                <Image src={featuredImage.node.sourceUrl} alt="FY" width={300} height={300} />
+                                <Image src={featuredImage.node.sourceUrl} alt="FY" width={300} height={300} className='w-full' />
                             </a>
                         </Fancybox>
                     ))
