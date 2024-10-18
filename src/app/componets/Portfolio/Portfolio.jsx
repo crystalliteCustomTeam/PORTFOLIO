@@ -18,7 +18,7 @@ export default function Portfolio({ slug }) {
             query: `query NewQuery {
             portfolioCategories(where: {slug: "${slug}"}) {
             nodes {
-                portfolios {
+                portfolios(first: 100) {
                 nodes {
                     featuredImage {
                     node {
