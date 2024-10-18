@@ -1,6 +1,5 @@
-"use client"
+"use client";
 import React, { useRef, useEffect } from "react";
-
 import { Fancybox as NativeFancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
@@ -9,17 +8,18 @@ function Fancybox(props) {
 
   useEffect(() => {
     const container = containerRef.current;
-
     const delegate = props.delegate || "[data-fancybox]";
     const options = props.options || {};
-
-    NativeFancybox.bind(container, delegate, options);
-
+    if (container) {
+      NativeFancybox.bind(container, delegate, options);
+    }
     return () => {
-      NativeFancybox.unbind(container);
-      NativeFancybox.close();
+      if (container) {
+        NativeFancybox.unbind(container);
+        NativeFancybox.close();
+      }
     };
-  });
+  }, [props.delegate, props.options]);
 
   return <div ref={containerRef}>{props.children}</div>;
 }

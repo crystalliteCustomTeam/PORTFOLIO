@@ -54,24 +54,39 @@ export default function Portfolio({ slug }) {
 
     return (
         <div className='columns-1 md:columns-2 xl:columns-4 lg:columns-3 gap-5 space-y-4'>
-            {
-                data.map(({ portfolios }) => (
-                    portfolios.nodes.map(({ featuredImage }, k) => (
-
-                        <Fancybox key={k}
-                            options={{
-                                Carousel: {
-                                    infinite: true,
-                                },
-                            }}
-                        >
-                            <a data-fancybox="gallery" href={featuredImage.node.sourceUrl} className='w-full' >
+            <Fancybox
+                options={{
+                    Carousel: {
+                        infinite: false,
+                    },
+                    Toolbar: {
+                        display: {
+                            left: ["infobar"],
+                            middle: [
+                                "zoomIn",
+                                "zoomOut",
+                                "toggle1to1",
+                                "rotateCCW",
+                                "rotateCW",
+                                "flipX",
+                                "flipY",
+                            ],
+                            right: ["close"],
+                        },
+                    },
+                    Fullscreen: false,
+                }}
+            >
+                {
+                    data.map(({ portfolios }) => (
+                        portfolios.nodes.map(({ featuredImage }, k) => (
+                            <a key={k} data-fancybox="gallery" href={featuredImage.node.sourceUrl} className='block w-full mb-5' >
                                 <Image src={featuredImage.node.sourceUrl} alt="FY" width={300} height={300} className='w-full' />
                             </a>
-                        </Fancybox>
+                        ))
                     ))
-                ))
-            }
+                }
+            </Fancybox>
         </div>
     )
 }
